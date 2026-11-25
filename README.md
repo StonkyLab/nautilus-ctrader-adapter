@@ -117,7 +117,7 @@ The last two trade: run them on a demo account that no other node trades.
 
 # Dependencies
 
-- Python 3.12 to 3.14
+- Python 3.13 or 3.14 (nautilus_trader 2.0.0rc9 needs 3.13)
 - [nautilus_trader](https://github.com/nautechsystems/nautilus_trader) 2.0.0rc9, from Nautech's
   package index (`https://packages.nautechsystems.io/simple`)
 - [websockets](https://github.com/python-websockets/websockets) 17 or newer
