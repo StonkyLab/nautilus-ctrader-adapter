@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nautilus-ctrader-adapter"
+version = "0.1.0"
+description = "Nautilus Trader adapter for the cTrader Open API"
+readme = "README.md"
+requires-python = ">=3.12,<3.15"
+dependencies = [
+    # Nautilus 2.0 release candidates come from Nautech's index:
+    #   --extra-index-url https://packages.nautechsystems.io/simple
+    "nautilus_trader==2.0.0rc9",
+    "websockets>=17",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.urls]
+Repository = "https://github.com/StonkyLab/nautilus-ctrader-adapter"
+
+[tool.setuptools]
+packages = ["nautilus_ctrader"]
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    "error::pytest.PytestUnraisableExceptionWarning",
+]
